@@ -1,0 +1,167 @@
+.skills {
+  position: relative;
+  padding: 0rem 2rem;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgb(209, 207, 207);
+  border-bottom: 1px solid rgb(209, 207, 207);
+
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-left:3px solid #00bcd4;
+  border-right:3px solid #00bcd4;
+  border-bottom:3px solid #00bcd4;
+  padding: 0.5rem 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+/* Icon Styling */
+.skill-card .icon {
+  font-size: 3rem;
+  color: #2196f3;
+  display: block;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.skill-card:hover .icon {
+  transform: rotate(12deg) scale(1.2);
+  color: #00bcd4;
+}
+
+.skill-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Decorative Background Patterns */
+.skills::before,
+.skills::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.skills {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Existing blobs */
+.skills::before,
+.skills::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Top-left Blue Glow */
+.skills::before {
+  width: 220px;
+  height: 220px;
+  top: 0%;
+  left: -60px;
+  background: radial-gradient(circle, #2196f3, transparent);
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+/* Bottom-right Cyan Glow */
+.skills::after {
+  width: 300px;
+  height: 300px;
+  bottom: 5%;
+  right: -80px;
+  background: radial-gradient(circle, #00bcd4, transparent);
+  opacity: 1;
+  filter: blur(5px);
+}
+
+/* ✅ Extra Blob 1 – Pink Neon */
+.skills .blob-1 {
+  position: absolute;
+  top: 0%;
+  right: 30%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff00ff, transparent);
+  filter: blur(30px);
+  opacity: 1;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+/* ✅ Extra Blob 2 – Green Glow */
+.skills .blob-2 {
+  position: absolute;
+  bottom: 0%;
+  left: 30%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ff99, transparent);
+  filter: blur(5px);
+  opacity: 0.45;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite alternate-reverse;
+}
+
+/* Floating Animation */
+@keyframes float {
+  from {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  to {
+    transform: translateY(-40px) translateX(30px) scale(1.1);
+  }
+}
+

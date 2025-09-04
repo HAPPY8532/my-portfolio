@@ -1,0 +1,33 @@
+.footer {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, #673ab7, #3f51b5) 1;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Text highlight on hover */
+.footer:hover {
+  color: #673ab7;
+  transition: color 0.3s ease;
+}
+
+/* Footer links */
+.footer a {
+  color: #3f51b5;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #673ab7;
+  text-decoration: underline;
+}
