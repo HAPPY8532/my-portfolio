@@ -89,7 +89,7 @@ const projects = [
 
 const Projects = forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="projects-section">
+    <section id="projects" ref={ref} className="projects-section">
       <div className="projects-container">
         <div className="blob-1"></div>
         <div className="blob-2"></div>
