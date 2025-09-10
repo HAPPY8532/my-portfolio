@@ -12,7 +12,7 @@ import {
   FaCloudSun,
 } from "react-icons/fa";
 import FinanceGrow from "../assets/FinanceGrow.png";
-import CarRental from "../assets/CarRental.png";
+import CarRental from "../assets/car.png";
 import ECommerce from "../assets/neomart.png";
 import TodoList from "../assets/Task.png";
 import "./Projects.css";
