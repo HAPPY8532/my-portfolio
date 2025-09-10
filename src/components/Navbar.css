@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0d0d0d; /* dark background for neon effect */
+  background: #0d0d0d; 
   border-bottom: 1px solid rgba(0, 255, 255, 0.2);
   z-index: 1000;
 }
@@ -15,7 +15,7 @@
 .logo {
   font-size: clamp(.7rem, 2vw, 1.6rem);
   font-weight: 700;
-  color: #0ff; /* neon cyan */
+  color: #0ff;
   letter-spacing: 1px;
   cursor: pointer;
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   padding: 2px;
-  font-size: clamp(1rem, 3vw, 2rem); /* यहाँ ही control रखो */
+  font-size: clamp(1rem, 3vw, 2rem); 
   font-weight: 700;
   color: #fff;
   border: 2px solid white;
@@ -40,17 +40,16 @@
 }
 
 .logo-t h1 {
-  margin: 0; /* extra space हटाओ */
-  font-size: inherit; /* parent की font-size use हो */
+  margin: 0;
+  font-size: inherit;
 }
 
-
 .logo:hover {
-  color: #ff00ff; /* magenta glow */
+  color: #ff00ff; 
   text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff, 0 0 32px #ff00ff;
 }
 .logo-t:hover {
-  color: #ff00ff; /* magenta glow */
+  color: #ff00ff;
   text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff, 0 0 32px #ff00ff;
 }
 
@@ -75,7 +74,7 @@
 
 /* Neon Hover Glow */
 .nav-links li:hover {
-  color: #39ff14; /* neon green */
+  color: #39ff14;
   text-shadow: 0 0 6px #39ff14, 0 0 12px #39ff14, 0 0 24px #39ff14;
 }
 
@@ -99,7 +98,7 @@
 
 /* Active Link */
 .nav-links li.active {
-  color: #ff00ff; /* neon magenta */
+  color: #ff00ff;
   text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff, 0 0 32px #ff00ff;
   animation: neonPulse 1.5s infinite alternate;
 }
@@ -107,9 +106,11 @@
 .nav-links li.active::after {
   width: 100%;
 }
-.hamberger{
+
+.hamburger {
   display: none;
 }
+
 /* Neon Pulse Animation */
 @keyframes neonPulse {
   0% {
@@ -122,13 +123,51 @@
     text-shadow: 0 0 6px #0ff, 0 0 12px #39ff14, 0 0 24px #ff00ff;
   }
 }
-@media (max-width:768px){
-  .nav-links{
+
+/* Mobile Responsive (Hamburger Menu) */
+@media (max-width: 768px) {
+  .nav-links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(13, 13, 13, 0.95);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #ff00ff;
+    animation: slideDown 0.3s ease forwards;
   }
-.hamberger{
-  display: block;
-  color: white;
-  font-size: clamp(1rem, 2vw, 3rem);
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: #0ff;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .hamburger:hover {
+    color: #ff00ff;
+    transform: rotate(90deg) scale(1.1);
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #0ff;
+  }
 }
+
+/* Mobile menu slide-down animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

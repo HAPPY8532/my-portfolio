@@ -1,6 +1,6 @@
 .projects-section {
   padding: 0px 0px 5rem 0;
-  background: #fff;  /* ✅ better dark base */
+  background: #fff;  
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -43,7 +43,7 @@
 /* Vertical line */
 .vertical-line {
   position: absolute;
-  top: -5.5%;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
   width: 3px;
@@ -74,6 +74,8 @@
 .timeline-item.left .project-details { order: 2; }
 .timeline-item.right .project-card { order: 2; z-index: 5; }
 .timeline-item.right .project-details { order: 1; }
+
+
 
 /* Project Card */
 .project-card {
@@ -106,10 +108,14 @@
 /* Text */
 .project-details h3 {
   margin-bottom: 10px;
+  width: fit-content;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 900;
   color: #0a0a0a;
-  /* text-shadow: 0 0 6px #00f0ff, 0 0 14px #ff00ff; */
+  border: 5px solid  orangered;
+  border-radius: 5px;
+  text-shadow: 0 0 6px gray;
+  padding: 5px;
 }
 .project-details p {
   font-size: 1rem;
@@ -328,11 +334,11 @@
 /* Responsive for 768px */
 @media screen and (max-width: 768px) {
   .desktop-only {
-    display: none; /* Hide timeline completely */
+    display: none; 
   }
 
   .mobile-only {
-    display: block; /* Show stacked layout */
+    display: block; 
   }
 
   .project-card-mobile {

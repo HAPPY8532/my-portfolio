@@ -1,33 +1,52 @@
 import React from "react";
+
 import "./Education.css";
 
 const Education = () => {
   const educationData = [
     {
-      degree: "Bachelor of Technology (B.Tech)",
-      institute: "XYZ Institute of Technology",
-      year: "2021 - 2025",
+      degree: "Java-Full Stack Development Course",
+      institute: "Ducat [DUCAT-Ghaziabad]",
+      year: "July,2025 - Present",
       status: "Ongoing",
       description:
+        "Focused on Java, Spring Boot, Hibernate, and building full-stack web applications.",
+      skills: ["Java", "Spring Boot", "Hibernate", "SQL", "REST APIs", "Git" , "GitHub", "Maven" , "Docker" , "Microservices" , "Full-Stack Development"]
+    },
+    {
+      degree: "Frontend Development Course",
+      institute: "Ducat [DUCAT-Ghaziabad]",
+      year: "Dec,2024 - July,2025",
+      status: "Completed",
+      description:
+        "Focused on React, JavaScript, HTML, CSS3, and building responsive web applications.",
+      skills: ["React", "JavaScript", "HTML", "CSS3", "Responsive Design", "Git" , "GitHub", "Bootstrap" , "Tailwind CSS" , "UI/UX" , "Web Development"]
+    },
+    {
+      degree: "Bachelor of Technology (B.Tech)",
+      institute: "Harish Chandara Ramkali Institute of Technology [HRIT-Ghaziabad]",
+      year: "2024",
+      status: "Completed",
+      description:
         "Focused on Computer Science with coursework in web development, data structures, and machine learning.",
-      skills: ["React", "JavaScript", "C++", "Data Structures"],
+      skills: ["React", "JavaScript", "HTML", "CSS3", "Data Structures"],
     },
     {
       degree: "Senior Secondary (12th)",
-      institute: "ABC Senior Secondary School",
-      year: "2019 - 2021",
+      institute: "Tagore Sikhsa Sadan Inter College Hapur [T.S.S Inter College Hapur]",
+      year: "2017",
       status: "Completed",
       description:
-        "Studied Physics, Chemistry, Mathematics, and Computer Science with strong academic performance.",
-      skills: ["Physics", "Mathematics", "Problem Solving"],
+        "Studied Physics, Chemistry, Mathematics,  with strong academic performance.",
+      skills: ["Physics", "Chemistry","Mathematics"],
     },
     {
       degree: "Secondary (10th)",
-      institute: "ABC Senior Secondary School",
-      year: "2018 - 2019",
+      institute: "Gandhi Satabdi Smarak Inter College Kaili-Meerut [G.S.S Inter College Kaili-Meerut]",
+      year: "2014",
       status: "Completed",
       description:
-        "Built strong foundations in science, mathematics, and logical reasoning.",
+        "Built strong foundations in science, mathematics and communication skills.",
       skills: ["Science", "Mathematics", "Communication"],
     },
   ];

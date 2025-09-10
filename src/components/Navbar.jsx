@@ -1,12 +1,15 @@
+// src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
   const [active, setActive] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false); // 
 
   const handleClick = (link) => {
     setActive(link);
+    setMenuOpen(false); // 
 
     const section = document.getElementById(link.toLowerCase());
     const navbar = document.querySelector(".navbar");
@@ -33,14 +36,13 @@ function Navbar() {
         });
       },
       {
-        threshold: 0.3,                 // सिर्फ 30% दिखना काफी है
-        rootMargin: "0px 0px -30% 0px", // नीचे से जल्दी trigger करो
+        threshold: 0.3,
+        rootMargin: "0px 0px -30% 0px",
       }
     );
 
     sections.forEach((section) => observer.observe(section));
 
-    // ✅ Last section (Contact) के लिए fallback
     const handleScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
       const docHeight = document.body.scrollHeight;
@@ -60,11 +62,13 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1 className="logo">🚀 Happy Tyagi</h1>
+      <h1 className="logo">🚀 Happy Kumar</h1>
       <div className="logo-t">
         <h1>Hk</h1>
       </div>
-      <ul className="nav-links">
+
+      {/* ✅ Menu Links */}
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         {["Home", "Skills", "Projects", "Education", "Contact"].map((link) => (
           <li
             key={link}
@@ -75,9 +79,15 @@ function Navbar() {
           </li>
         ))}
       </ul>
-      <h1 className="hamberger">
+
+      {/* ✅ Hamburger Button */}
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle Menu"
+      >
         <GiHamburgerMenu />
-      </h1>
+      </button>
     </nav>
   );
 }

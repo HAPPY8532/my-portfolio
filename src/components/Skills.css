@@ -123,9 +123,10 @@
   background: radial-gradient(circle, #00bcd4, transparent);
   opacity: 1;
   filter: blur(5px);
+  z-index: -10;
 }
 
-/* ✅ Extra Blob 1 – Pink Neon */
+/*  Extra Blob 1 – Pink Neon */
 .skills .blob-1 {
   position: absolute;
   top: 0%;
@@ -140,7 +141,7 @@
   animation: float 6s ease-in-out infinite alternate;
 }
 
-/* ✅ Extra Blob 2 – Green Glow */
+/*  Extra Blob 2 – Green Glow */
 .skills .blob-2 {
   position: absolute;
   bottom: 0%;

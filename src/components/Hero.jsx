@@ -4,6 +4,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import Profile from "../assets/Profile.png"; 
 import "./Hero.css";
 
 function Hero({onProjectClick}) {
@@ -54,7 +55,6 @@ function Hero({onProjectClick}) {
       <span className="star"></span>
       <span className="star"></span>
 
-   {/* Decorative SVG Lines */}
 
 {/* Decorative SVG Patterns */}
 <svg className="decor-line wave" viewBox="0 0 200 100" preserveAspectRatio="none">
@@ -157,7 +157,7 @@ function Hero({onProjectClick}) {
           className="hero-text"
         >
           <h2>Hello 👋, I’m</h2>
-          <h1>Happy Tyagi</h1>
+          <h1>Happy Kumar</h1>
           <h3>
             <ReactTyped
               strings={[
@@ -179,10 +179,10 @@ function Hero({onProjectClick}) {
 
           {/* Social Icons */}
           <div className="social-icons">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/HAPPY8532" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a href="www.linkedin.com/in/happy-kumar-reactjsdev0001" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
@@ -213,7 +213,7 @@ function Hero({onProjectClick}) {
         >
           <div className="glow-ring">
             <img
-              src="https://plus.unsplash.com/premium_photo-1664533227571-cb18551cac82?w=500&auto=format&fit=crop&q=60"
+              src={Profile}
               alt="developer"
               className="profile-pic"
             />
